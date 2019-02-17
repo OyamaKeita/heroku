@@ -14,25 +14,25 @@
               </ul>
               @endif
               <div class="form-group row">
-               <lavel class="col-md-2" for="title">氏名</lavel>
+               <lavel class="col-md-2" for="name">氏名</lavel>
                <div class="col-md-10">
                  <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                </div>
              </div>
              <div class="form-group row">
-              <lavel class="col-md-2" for="title">性別</lavel>
+              <lavel class="col-md-2" for="gender">性別</lavel>
               <div class="col-md-10">
                 <input type="text" class="form-control" name="title" value="{{ old('title') }}">
               </div>
             </div>
             <div class="form-group row">
-             <lavel class="col-md-2" for="title">趣味</lavel>
+             <lavel class="col-md-2" for="hobby">趣味</lavel>
              <div class="col-md-10">
                <input type="text" class="form-control" name="title" value="{{ old('title') }}">
              </div>
            </div>
            <div class="form-group row">
-            <lavel class="col-md-2" for="title">自己紹介欄</lavel>
+            <lavel class="col-md-2" for="introduction">自己紹介欄</lavel>
             <div class="col-md-10">
               <input type="text" class="form-control" name="title" value="{{ old('title') }}">
             </div>

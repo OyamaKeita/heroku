@@ -24,8 +24,8 @@ public function create(Request $request)
   $form = $request->all();
 
   // フォームから画像が送られてきたら、保存して、$news->image_pathに画像のパスを保存する
-  if (isset(&form['image'])) {
-    $path = &request->file('image')->store('public/image');
+  if (isset($form['image'])) {
+    $path = $request->file('image')->store('public/image');
     $news->image_path = basename($path);
   } else {
     $news->image_path = null;
