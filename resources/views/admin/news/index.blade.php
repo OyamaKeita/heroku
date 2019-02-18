@@ -48,8 +48,8 @@
                                         <a href="{{ action('Admin\NewsController@edit', ['id' => $news->id]) }}">編集</a>
                                       </div>
                                       <div>
-                                        <a href="{{ action('Admin\NewsController@delete', ['id => $news->id']) }}">削除</a>
-                                      </div>
+                                            <a href="{{ action('Admin\NewsController@delete', ['id' => $news->id]) }}">削除</a>
+                                        </div>
                                     </td>
                                 </tr>
                             @endforeach
