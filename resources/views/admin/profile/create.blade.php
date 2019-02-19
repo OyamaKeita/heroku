@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-8 mx-auto">
-            <h2>海に飛び込もうの会</h2>
+            <h2>Profile</h2>
             <form action="{{ action('Admin\ProfileController@create') }}" method="post" enctype="multipart/form-data">
               @if (count($errors) > 0)
               <ul>
@@ -43,11 +43,7 @@
                   <input type="text" class="form-control" name="title" value="{{ old('title') }}">
                 </div>
               </div>
-              <div class="form-group row">
-                <lavel class="col-md-2" for="body">本文</lavel>
-                <div class="col-md-10">
-                  <textarea class="form-control" name="body" rows="20">{{ old('body') }}</textarea>
-                </div>
+
               </div>
               <div class="form-group row">
                 <lavel class="col-md-2" for="title">画像
