@@ -44,7 +44,7 @@ public function create(Request $request)
       if (empty($profile)) {
         abort(404);
       }
-      return view('admin.profile.edit', ['news_form' => $profile]);
+      return view('admin.profile.edit', ['profile_form' => $profile]);
   }
 
 
@@ -69,13 +69,5 @@ public function create(Request $request)
       // 該当するデータを上書きして保存する
       $profile->fill($profile_form)->save();
   return redirect('admin/profile');
-}
-public function edit()
-{
-  return view('admin.profile.edit');
-}
-public function update()
-{
-  return redirect('admin/profile/edit');
 }
 }
