@@ -68,10 +68,10 @@ public function edit(Request $request)
 
 public function update(Request $request)
 {
-  // Varidationをかける
-  $this->varidate($request, News::$rules);
+  // sqlite_validationをかける
+  $this->validate($request, News::$rules);
   // News Modelからデータを取得する
-  $news = News::find($request->id);
+  $news = News::orderBy('create_at', 'desk')->first();
   // 送信されてきたフォームデータを格納する
   $news_form = $request->all();
   if (isset($news_form['image'])) {
