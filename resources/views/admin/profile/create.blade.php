@@ -14,46 +14,31 @@
               </ul>
               @endif
               <div class="form-group row">
-               <lavel class="col-md-2" for="name">氏名</lavel>
+               <label class="col-md-2" for="name">氏名</label>
                <div class="col-md-10">
-                 <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                 <input type="text" class="form-control" name="name" value="{{ old('title') }}">
                </div>
              </div>
              <div class="form-group row">
-              <lavel class="col-md-2" for="gender">性別</lavel>
+              <label class="col-md-2" for="gender">性別</label>
               <div class="col-md-10">
-                <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+                <input type="text" class="form-control" name="gender" value="{{ old('title') }}">
               </div>
             </div>
             <div class="form-group row">
-             <lavel class="col-md-2" for="hobby">趣味</lavel>
+             <label class="col-md-2" for="hobby">趣味</label>
              <div class="col-md-10">
-               <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+               <input type="text" class="form-control" name="hobby" value="{{ old('title') }}">
              </div>
            </div>
            <div class="form-group row">
-            <lavel class="col-md-2" for="introduction">自己紹介欄</lavel>
+            <label class="col-md-2" for="introduction">自己紹介欄</label>
             <div class="col-md-10">
-              <input type="text" class="form-control" name="title" value="{{ old('title') }}">
+              <input type="text" class="form-control" name="introduction" value="{{ old('title') }}">
             </div>
           </div>
-              <div class="form-group row">
-                <lavel class="col-md-2" for="title">タイトル</lavel>
-                <div class="col-md-10">
-                  <input type="text" class="form-control" name="title" value="{{ old('title') }}">
-                </div>
-              </div>
-
-              </div>
-              <div class="form-group row">
-                <lavel class="col-md-2" for="title">画像
-                </lavel>
-                <div class="col-md-10">
-                  <input type="file" class="form-control-file" name="image">
-                </div>
-              </div>
               {{ csrf_field() }}
-              <input type="submit" class="btn btn-primary"value="更新">
+              <input type="submit" class="btn btn-primary" value="更新">
             </form>
         </div>
     </div>
