@@ -37,12 +37,11 @@ public function create(Request $request)
   public function edit(Request $request)
   {
       // Profile Modelからデータを取得する
-      $profile = Profile::orderBy('create_at', 'desk')->first();
-      $profilehistory = ProfileHistory::all();
-      if (empty($profile)) {
-        abort(404);
-      }
-      return view('admin.profile.edit', ['profile_form' => $profile, 'profilehistory' => $profilehistory]);
+      $profile = Profile::orderBy('created_at', 'desc')->first();
+
+      $Profilehistory = ProfileHistory::all();
+
+      return view('admin.profile.edit', ['profile_form' => $profile, 'profilehistory' => $Profilehistory]);
   }
 
 
@@ -51,7 +50,7 @@ public function create(Request $request)
       // Validationをかける
       $this->validate($request, Profile::$rules);
       // Profile Modelからデータを取得する
-      $profile = Profile::find($request->id);
+      $profile = new Profile;
       // 送信されてきたフォームデータを格納する
       $profile_form = $request->all();
       if (isset($profile_form['image'])) {
@@ -71,6 +70,6 @@ public function create(Request $request)
       $Profilehistory->profile_id = $profile->id;
       $Profilehistory->edited_at = Carbon::now();
       $Profilehistory->save();
-  return redirect('admin/profile');
+  return redirect('admin/profile/edit');
 }
 }

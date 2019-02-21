@@ -71,7 +71,7 @@ public function update(Request $request)
   // sqlite_validationをかける
   $this->validate($request, News::$rules);
   // News Modelからデータを取得する
-  $news = News::orderBy('create_at', 'desk')->first();
+  $news = News::find($request->id);
   // 送信されてきたフォームデータを格納する
   $news_form = $request->all();
   if (isset($news_form['image'])) {
